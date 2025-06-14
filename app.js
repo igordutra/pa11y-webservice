@@ -19,19 +19,6 @@ const Hapi = require('@hapi/hapi');
 const {MongoClient} = require('mongodb');
 const {dim} = require('kleur');
 
-const puppeteer = require('puppeteer');
-const fs = require('fs');
-const path = require('path');
-
-// Load your production config
-const configPath = path.join(__dirname, 'production.json');
-const configP = JSON.parse(fs.readFileSync(configPath, 'utf-8'));
-
-// Dynamically override the path
-configP.chromeLaunchConfig.executablePath = puppeteer.executablePath();
-
-console.log('Using Chrome at:', configP.chromeLaunchConfig.executablePath);
-
 function initApp(config, callback) {
 	const app = {
 		server: new Hapi.Server({
