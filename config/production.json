@@ -1,6 +1,6 @@
 {
 	"chromeLaunchConfig": {
-    "executablePath": "/opt/render/project/.cache/puppeteer/chrome/linux-123.0.6312.105/chrome",
+    "executablePath": "/opt/render/project/.cache/puppeteer/chrome/linux-123.0.6312.105/chrome-linux64/chrome",
     "args": ["--no-sandbox", "--disable-setuid-sandbox"]
   }
 }
