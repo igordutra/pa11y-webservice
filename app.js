@@ -25,13 +25,12 @@ const path = require('path');
 
 // Load your production config
 const configPath = path.join(__dirname, 'production.json');
-const config = JSON.parse(fs.readFileSync(configPath, 'utf-8'));
+const configP = JSON.parse(fs.readFileSync(configPath, 'utf-8'));
 
 // Dynamically override the path
-config.chromeLaunchConfig.executablePath = puppeteer.executablePath();
+configP.chromeLaunchConfig.executablePath = puppeteer.executablePath();
 
-console.log('Using Chrome at:', config.chromeLaunchConfig.executablePath);
-
+console.log('Using Chrome at:', configP.chromeLaunchConfig.executablePath);
 
 function initApp(config, callback) {
 	const app = {
