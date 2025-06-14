@@ -1,0 +1,11 @@
+{
+	"database": "mongodb+srv://admin:admin123@cluster0.qddpizq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
+	"host": "0.0.0.0",
+	"port": 3000,
+	"cron": "0 30 0 * * *",
+	"chromeLaunchConfig": {
+		"args": [
+			"--no-sandbox"
+		]
+	}
+}
